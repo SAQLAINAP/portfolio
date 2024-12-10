@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Timeline } from "../../AceternityUI/Timeline/timeline";
 
 export function TimelineDemo() {

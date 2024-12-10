@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+// import React from "react";
 import { ImagesSlider } from "./image-slider";
 import Typewriter from 'typewriter-effect';
 import styled, { keyframes } from 'styled-components';

@@ -39,7 +39,7 @@ export const ImagesSlider = ({
 
   useEffect(() => {
     loadImages();
-  }, []);
+  }, [autoplay, handleNext, handlePrevious]);
 
   const loadImages = () => {
     const loadPromises = images.map((image) => {
@@ -118,7 +118,6 @@ export const ImagesSlider = ({
     },
   };
 
-  const areImagesLoaded = loadedImages.length > 0;
 
   return (
     <div
@@ -130,14 +129,14 @@ export const ImagesSlider = ({
         perspective: "1000px",
       }}
     >
-      {areImagesLoaded && children}
-      {areImagesLoaded && overlay && (
+      {!loading && children}
+      {!loading && overlay && (
         <div
           className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)}
         />
       )}
 
-      {areImagesLoaded && (
+      {!loading && (
         <AnimatePresence>
           <motion.img
             key={currentIndex}
