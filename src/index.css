@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind Configuration for Background */
+/* Global Styling for AMOLED Pitch Black Background */
+html, body {
+    background-color: #000000; /* AMOLED black background */
+    color: #ffffff; /* White text for better contrast */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Optional: Customize font */
+  }
+  
+  /* Ensure Scrollbars Blend with Background */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+  }
+  
